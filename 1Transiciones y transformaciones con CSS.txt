@@ -1,0 +1,155 @@
+----Transiciones y transformaciones con CSS----
+
+pagina para ver de que manera van a funcionar nuestras 
+transiciones:
+
+https://matthewlein.com/tools/ceaser
+
+
+
+NOTA:
+Las tracisiones deben organizarse y llarmarse mediante
+clases.
+
+Las trancisiones ocurren con CSS
+
+EJM:
+
+<div class="transicion caja fuente">Hola mundo</div>
+
+-Propiedades que puedo afectar con trancisiones:
+
+ 	
+		background-position
+		background-size
+		border-Color
+		border-width
+		Color
+		border-radius
+		font-size
+		font-weight
+		height width
+		left tight bottom top
+		padding
+		opacity 
+
+La transciones alargadas esta compuestas por 3 elementos 
+principales :
+
+ 		Transition-duration: .3s;
+
+			Son la duracion
+
+		Transition-timing-function: ;
+
+			Que es la aceleracion.
+
+		Transition-property: ;
+
+			Las propiedades que yo quiero afectar
+
+La sintaxis resumida es que yo use los 3 valores en una sola propiedad
+
+
+EJM
+
+     	transition: .3s opacity ease;
+
+         Opacity es la class="opacity" que va a afectar
+         
+           ease es el efecto que le vamos a asignar.
+
+
+
+
+CODIGO de transiciones:
+
+		.transicion{
+		/* transition:; */
+		transition-duration: .3s;
+		transition-timing-function: ;
+		transition-property: ;
+				}
+		.caja{
+  		width: 200px;
+  		height: 200px;
+ 		border: 1px solid red;
+			}
+		.Opacity{
+ 		 opacity: 0;
+			}
+		.Opacity:hover{
+		opacity: 1;
+		}
+		.Fuente:hover{
+ 		font-size: 20px;
+  		font-weight: 600;
+		}
+		.Colores:hover{
+ 		 color:red;
+  		background: yellow;
+		}
+
+Transformaciones:
+
+-Rotar 360 grados una imagen
+
+		.Rotacion:hover{
+		transform: rotate(360deg);
+			}
+
+-Escala de un elemento:
+
+Duplica el tamaño de un elementos tantas veces como le indique
+
+.Escala:hover{
+  transform: scale(2);
+}
+
+-Elemento sesgado :
+
+	Hace que un elemento se incline y se estire.
+		.Sesgado:hover{
+ 		 transform: skew(45deg);
+		}
+
+-Trasnformaciones de traslacion:
+
+html:
+<span>hola</span><img class="transicion  Traslacion" src="images/invie.png" width="186"/><span>mundo</span>
+
+css:
+		.Traslacion:hover{
+  		transform: translateX(50px);
+		}
+
+
+
+  Pueden ser en 3D xyz.
+
+		.Traslacion:hover{
+ 		 transform:translate3d(50px,20px,50px);
+		}
+
+
+Para que un elemento sea afectado por el eje z tiene que que recibir
+una perspectiva desde el contenedor.
+
+		body{
+  		perspective: 1000px;
+		}
+		.Traslacion:hover{
+  		transform:translate3d(50px,20px,50px);
+		}
+
+
+	Le esta dando un sentido de profundidad al elemento
+
+
+ 	Recordar que las transformaciones no afectan a los elementos 	hermanos
+
+-Transformaciones mixtas:
+
+Es decir , conbinar todas estas transiciones en una sola.
+
+

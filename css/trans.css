@@ -1,0 +1,69 @@
+/*Propiedades que puedo afectar
+background-position
+background-size
+border-Color
+border-width
+Color
+border-radius
+font-size
+font-weight
+height width
+left tight bottom top
+padding
+opacity
+
+*/
+
+body{
+  background:skyblue;
+}
+.contenedor{
+  margin: 0 auto;
+  width: 600px;
+  font-family: sans-serif;
+}
+.transicion{
+/* transition:; */
+transition-duration: .3s;
+transition-timing-function: ;
+transition-property: ;
+}
+.caja{
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}
+.Opacity{
+  opacity: 0;
+}
+.Opacity:hover{
+opacity: 1;
+}
+.Fuente:hover{
+  font-size: 20px;
+  font-weight: 600;
+}
+.Colores:hover{
+  color:red;
+  background: yellow;
+}
+
+.Rotacion:hover{
+transform: rotate(360deg);
+}
+
+.Escala:hover{
+  transform: scale(2);
+}
+.Sesgado:hover{
+  transform: skew(45deg);
+}
+body{
+  perspective: 1000px;
+}
+.Traslacion:hover{
+  transform:translate3d(50px,20px,50px);
+}
+.Mixtas:hover{
+  transform: rotate(45deg) scale(2) translateX(50px);
+}
